@@ -1,0 +1,8 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+> setwd("/Projects/R/CSX415-project/phone_mark")
+> library('ProjectTemplate')
+> load.project()
