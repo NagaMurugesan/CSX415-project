@@ -3,6 +3,21 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-> setwd("/Projects/R/CSX415-project/phone_mark")
-> library('ProjectTemplate')
-> load.project()
+setwd("/Projects/R/CSX415-project/phone_mark")
+library('ProjectTemplate')
+load.project()
+
+raw_data <- read.csv(‘/Projects/R/CSX415-project/phone_mark/data/bank.csv’,sep=‘;’)
+
+ind <- sample(2,nrow(raw_data), replace = TRUE, prob = c(0.8,0.2))
+train_data <- raw_data[ind==1,]
+test_data <- raw_data[ind==2,]
+library(randomForest)
+model <- randomForest(y~ age + job + marital + education + default + balance + housing + loan + contact + duration + campaign + pdays + previous + poutcome, data = train_data)
+print(model)
+
+pred<- predict(model,newdata=test_data)
+
+table(pred,test_data$y)
+
+
