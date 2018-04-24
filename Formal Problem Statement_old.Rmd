@@ -1,9 +1,10 @@
 ---
-title: "Formal problem Statement"
-author: "Murugesan Nagarjan"
-date: "April 17, 2018"
+title: "Formal Problem Statement"
+author: "Murugesan Nagarajan"
+date: "April 10, 2018"
 output: html_document
 ---
+
 
 ##Introduction
 
@@ -39,10 +40,9 @@ Marketing team should provide the customer attributes (feature) to the developed
 
 
 ##Project timeline:
-Project Phase|efforts
--------------|-------
-Data collection|20 days
-Organize and Store |20 days
-Utilize and build model | 40 days 
-Test and validate the Mode | 10 days
-Decide |  10 days
+
+Data collection: 20 days
+Organize and Store : 20 days
+Utilize and build model : 40 days 
+Test and validate the Mode : 10 days
+Decide :  10 days
