@@ -5,6 +5,7 @@ date: "April 17, 2018"
 output: html_document
 ---
 
+
 ##Introduction
 
 Bank ABC's marketing department markets Bank products like Checking account, saving account, term deposit and Loan products to their customers. As part of this marketing calls, the marketing team contact various people and gather initial information about the customer and store them in a call history database. The database has the past call history and details about how many such a call turned into potential buyer.
