@@ -6,9 +6,10 @@ square<-function(x)
   return(x^2)
 }
 
-#https://gist.github.com/primaryobjects/d02b93f1e539a9dd2c85
 
-#' @param input
+
+#'  This function read the data from the csv file, apply multiple models and calculate the metrics for these model.
+#' @param No input Required
 #' @export
 train_model<- function()
 {
