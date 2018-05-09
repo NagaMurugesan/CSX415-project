@@ -1,0 +1,9 @@
+Package: modelpkgs
+Title: squared values
+Version: 0.1
+Author: Muru<murugesan.nagarajan@gmai.com>
+Maintainer: Naga<murugesan.nagarajan@gmai.com>
+Description: Find the square
+Depends: R (>= 3.1.0)
+License: MIT
+RoxygenNote: 6.0.1

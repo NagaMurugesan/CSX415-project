@@ -1,0 +1,130 @@
+---
+title: "performance"
+author: "Murugesan Nagarajan"
+date: "5/8/2018"
+output:
+  html_document: default
+  pdf_document: default
+---
+## Analysis
+Installed the caret package and then trying to apply the GBM,Random Forest, Neural Network and Logistic regression from the caret package.
+
+The below code will read the data from the CSV file
+
+```{r eval=FALSE}
+library("caret")
+
+raw_data <- read.csv('/Projects/R/CSX415-project/phone_mark/data/bank.csv',sep=';')
+
+```
+
+## Data split
+
+Use the caret function to divide the data into two set 75% of data as training set and 25% of data as testset
+
+```{r eval=FALSE}
+index<-createDataPartition(raw_data$y,p=0.5,list=FALSE)
+trainset<- raw_data[index,]
+testset<-raw_data[-index,]
+
+```
+## Future selection using caret
+
+```{r eval=FALSE}
+outcomeName<-'y'
+predictors<-names(trainset)[!names(trainset) %in% outcomeName]
+```
+
+## Training the model
+Apply GBM, Random forest, Neural Net and Logistic Regression
+
+```{r eval=FALSE}
+model_gbm<-train(trainset[,predictors],trainset[,outcomeName],method='gbm')
+model_rf<-train(trainset[,predictors],trainset[,outcomeName],method='rf')
+model_nnet<-train(trainset[,predictors],trainset[,outcomeName],method='nnet')
+model_glm<-train(trainset[,predictors],trainset[,outcomeName],method='glm')
+```
+
+## Prediction
+Predict the outcome of test data and then evaluate the model performance
+
+Evaluate the random forest model using the metrics
+--------------------------------------------------
+
+```{r eval=FALSE}
+predict<-predict.train(object=model_rf,testset[,predictors],type="raw")
+table(predict)
+confusionMatrix(predict,testset[,outcomeName])
+```
+## Model performance for Random Forest
+
+confusion matric for the Random Forest model
+
+Prediction|no|yes
+----------|----|----
+No|1927|161
+Yes|73|99
+
+
+
+evaluate the GBM model and find the metrics
+--------------------------------------------
+
+```{r eval=FALSE}
+predict<-predict.train(object=model_gbm,testset[,predictors],type="raw")
+table(predict)
+confusionMatrix(predict,testset[,outcomeName])
+```
+## Model performance for GBM
+
+confusion matric for the GBM model
+
+Prediction|no|yes
+----------|---|----
+No|1954|189
+Yes|46|71
+
+evaluate the Neural Net model and calculate the metrics.
+---------------------------------------------------------
+```{r eval=FALSE}
+predict<-predict.train(object=model_nnet,testset[,predictors],type="raw")
+table(predict)
+confusionMatrix(predict,testset[,outcomeName])
+```
+## Model performance for Neural Networks
+
+confusion matric for the Neural Networks
+
+Prediction|no|yes
+----------|---|---
+No|1930|147
+Yes|70|113
+
+
+
+evaluate the glm and calculate the metrics.
+-------------------------------------------
+```{r eval=FALSE}
+predict<-predict.train(object=model_glm,testset[,predictors],type="raw")
+confusionMatrix(predict,testset[,outcomeName])
+```
+## Model performance for Logistic Regression
+
+confusion matric for the Logistic Regression
+
+Prediction|no|yes
+----------|---|----
+No|1962|179
+Yes|38|81
+
+## Conclusion
+
+Calculated the accuracy and Sensitivity for all these model and listed down
+
+Model|Accuracy|Sensitivity
+-----|--------|--------------
+GBM|90|98
+Random Forest|89|99
+Neural Network|90|97
+Logistic Regression|90|98
+

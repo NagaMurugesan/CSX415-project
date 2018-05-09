@@ -43,7 +43,7 @@ sum(diag(table(predi,train_data$y)))/length(train_data$y)
 ```
 # Conclusion
 
-The accuracy of the test data is over 90% by using the rpart model
+The accuracy of the test data is over 91% by using the rpart model
 
 
 
