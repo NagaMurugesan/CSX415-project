@@ -1,6 +1,6 @@
 ---
 title: "Formal problem Statement"
-author: "Murugesan Nagarjan"
+author: "Murugesan Nagarajan"
 date: "April 17, 2018"
 output: html_document
 ---
@@ -8,42 +8,58 @@ output: html_document
 
 ## Introduction
 
-Bank ABC's marketing department markets Bank products like Checking account, saving account, term deposit and Loan products to their customers. As part of this marketing calls, the marketing team contact various people and gather initial information about the customer and store them in a call history database. The database has the past call history and details about how many such a call turned into potential buyer.
+  Bank ABC's marketing department markets Bank products like Checking account, saving account, term deposit and Loan products to their customers and they conduct marketing campaign periodically. As part of this marketing campaign, the marketing team contacts various people and gather initial information about their personal and financial details and store them in a call history database. The database has the past call history and details about how many such a call turned into a potential buyer who subscribed to one of these products.
 
-The team has around 2 years' worth of call history and the outcome details whether a customer turned into buyer or not. The department director complained that the team is spending lot of effort on making this phone call campaign, but very little prospect become clients for them. He wanted improve the no of sales target.
-
-
-## Purpose
-
-The purpose of this project is to reduce the marketing campaign spending cost and increase the sales target (sales per call)
+  The team has around 2 year's worth of call history and the outcome details whether a customer turned into a buyer or not. The department director complained that the team is spending a lot of effort on making this phone call campaign, but very little prospect become a client for them. So, The manager wanted to improve his team productivity and reduce cost by predicting a potential subscriber using these past call history. 
 
 
-## Stake holders
+## Purpose of the project
 
-Project sponsor: Marketing department director.
-End Users: Marketing team.
-Project Manager: IT project Manager
-Project Team: Data scientist, Data Engineer and Business Analyst
-Business user:  Marketing Lead
+The classification goal is to predict if the client will subscribe (yes/no) a term deposit (variable y).
+
+  The purpose of this project is to reduce the marketing campaign spending cost and increase the sales target (sales per call) by predicting a potential subscriber.
+
+
+## Stakeholders
+Important stakeholders for this project.
+
+|Role| Task description and expectation
+|:-------------------|:----------------------------------------------|
+|Project sponsor| Marketing department director is the sponsor for this project and responsible for funding this project and delivering the benefit to the Organization.|
+|Project Manager| IT Project Manager is responsible for implementing the project within timeline and given budget and addressing any roadblock during the execution of this project|
+|Project Team| Project team consist of one Data scientist, two Data Engineer and one Business Analyst responsible for collecting data from Marketing team, Cleaning the data, identifying features, identifying the model,development, testing and implementing the model|
+|Business user|  Marketing Lead is a business user for this project and responsible for validating the model in User acceptance environment and approving the model for the production deployment|
+|End Users|Marketing team members will be using this model in their day to day life before contacting any prospects.|
 
 ## Success criteria
 
-Predicting whether a customer call become a client or not and reducing the no of calls to customer that will not turn into client.
+* Model accuracy should be above 60% for better prediction rate.
+* True positive and True negative rate should be more than 50%
+* Reducing the marketing team spending cost on the marketing campaign and increasing the probability of making a customer to sign for a banking product.
+
 
 ## Risk
 
-Chances of losing potential client due to unavailability of data in call history.
+* The model can predict a potential subscriber as non-subscriber due to unavailability of data in the call history database.  This risk can be reduced by collecting more data from the marketing department.
+
+* The project might face opposition from the Marketing team members since they might feel this project will take away their jobs.
+
+* The project might not achieve the acceptable prediction behavior.
 
 ## Project usage
 
-Marketing team should provide the customer attributes (feature) to the developed Machine Learning model and predict whether this customer will subscribe to a bank product.
+  The prediction model will be implemented in a production environment as part of Marketing campaign web application. The marketing team members will be entering the customer features in that application and then they will try to predict. The web application will use this model in the backend and provide a result to the marketing team member whether he/she can call the customer or not. Then marketing team member then decides whether to call this customer or not based on the criteria given to them.
 
 
-## Project timeline:
-Project Phase|efforts
--------------|-------
-Data collection|20 days
-Organize and Store |20 days
-Utilize and build model | 40 days 
-Test and validate the Mode | 10 days
-Decide |  10 days
+## Project implementation timeline:
+
+The model will be implemented in 4 to 5 months based on the below high-level timeline, The below timeline will be adjusted based on the unforeseen risk.
+
+|Project Phase|Description|efforts|
+|-------------|----------------------------------|-----------------------------|
+|Data Analysis | As part of this phase, development team interacts with the marketing team and understand the call history details| 2-3 weeks for Data Analysis|
+|Data collection|As part of this phase, Development team collects raw data from marketing call history and identify key features, transform and prepare the data for Data Scientist| 4 weeks for data collection|
+|Model development | As part of this phase, Data scientist use these features, train the model and come up with a suitable model for deployment| 8 weeks for development of model|
+|UAT testing| As part of this phase, the developed model will be deployed in UAT environment and marketing team lead will apply this model and evaluate for the production usage.| 2 weeks for UAT testing|
+|Production deployment | The tested model will be deployed in the production environment and marketing team lead will validate the model and provide approval for the successful implementation| 1 weeks
+|Maintenance | As part of this phase, The deployed model will be validated against ongoing customer call and performance will be captured for reevaluation| 6 months|

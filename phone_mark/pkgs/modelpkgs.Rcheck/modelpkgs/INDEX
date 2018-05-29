@@ -1,0 +1,17 @@
+predictModel_gbm        This function reads the GBM model from the data
+                        directory and then predict the outcome based on
+                        the test data set.
+predictModel_glm        This function reads the GLM model from the data
+                        directory and then predict the outcome based on
+                        the test data set.
+predictModel_nnet       This function reads the Neural Network model
+                        from the data directory and then predict the
+                        outcome based on the test data set.
+predictModel_rf         This function reads the Random Forest model
+                        from the data directory and then predict the
+                        outcome based on the test data set.
+readprojectpath         This function reads the project location from
+                        user and return the path to the caller.
+train_model             The function train_model reads the data from
+                        the csv file, apply multiple models and save
+                        the models output as .rds files.

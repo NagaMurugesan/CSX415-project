@@ -7,3 +7,68 @@ output: html_document
 
 # Data Location
 
+The training data set is located at the folder CSX415-project/phone_mark/data. The following files are present in this location.
+
+bank.csv-- this is the data set mainly used in this project to train and test the model.
+bank-additional-full.csv -- this data set has some more additional data, but it was not used in this project.
+
+# Formal problem statement
+
+The formal problem statement is located at this below path as a .rmd file and the HTML report also available at the same location.
+
+/CSX415-project/01-Formal-problem-statement/Formal Problem Statement.Rmd
+
+
+# Project details
+
+Initial analysis reports are available at /CSX415-project/02-initial-analysis as .rmd file and HTML report.
+
+simple analysis with Linear model and rpart model analysis reports are located at /CSX415-project/03-simple-analysis
+
+
+
+# Package Location
+
+Model package is located at /CSX415-project/phone_mark/pkgs/modelpkgs/ and the package project file is modelpkgs.Rproj
+
+Package name is modelpkgs
+
+
+
+# Dependency
+
+The below packages are required to run this project.
+
+1) Caret
+2) roxygen2
+3) e1071
+4) ROCR
+5) recipes
+6) kernlab
+7) robustbase
+
+# Package details
+
+/CSX415-project/phone_mark/pkgs/modelpkgs/R/power.R contains all the function to train and test the model.
+
+execute the function train_model() to train the GBM,Randomforest, Neural Network and GLM model and write the model file in the directory CSX415-project/phone_mark/pkgs/modelpkgs/data/.
+
+execute the function predictModel_gbm() to test the GBM model with the test data.
+
+execute the function predictModel_rf() to test the Random Forest model with the test data.
+
+execute the function predictModel_nnet() to test the Neural Network model with the test data.
+
+execute the function predictModel_glm() to test the Neural Network model with the test data.
+
+Final model score and performance evaluation is located in the /CSX415-project/phone_mark/reports/ folder.
+
+# Running the project
+
+set the working directory as the absolute path of the project location CSX415-project and then run main.R file located in folder /CSX415-project/phone_mark/pkgs/modelpkgs/R/.
+
+# Packrat archival
+
+Packrat bundled file is located at /CSX415-project/phone_mark/pkgs/modelpkgs/packrat/bundles/ and use the latest bundle from this location.
+
+

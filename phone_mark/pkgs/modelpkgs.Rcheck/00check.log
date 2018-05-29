@@ -1,0 +1,129 @@
+* using log directory ‘/Projects/R/CSX415-project/phone_mark/pkgs/modelpkgs.Rcheck’
+* using R version 3.3.3 (2017-03-06)
+* using platform: x86_64-apple-darwin13.4.0 (64-bit)
+* using session charset: UTF-8
+* checking for file ‘modelpkgs/DESCRIPTION’ ... OK
+* this is package ‘modelpkgs’ version ‘0.1’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘modelpkgs’ can be installed ... OK
+* checking installed package size ... NOTE
+  installed size is 17.1Mb
+  sub-directories of 1Mb or more:
+    data  17.0Mb
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... NOTE
+Malformed Description field: should contain one or more complete sentences.
+License components which are templates and need '+ file LICENSE':
+  MIT
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... WARNING
+Subdirectory ‘data’ contains no data sets.
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking dependencies in R code ... WARNING
+'library' or 'require' call not declared from: ‘caret’
+'library' or 'require' call to ‘caret’ in package code.
+  Please use :: or requireNamespace() instead.
+  See section 'Suggested packages' in the 'Writing R Extensions' manual.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+predictModel_gbm: no visible global function definition for
+  ‘predict.train’
+predictModel_gbm: no visible binding for global variable ‘model_gbm’
+predictModel_gbm: no visible binding for global variable ‘testset’
+predictModel_gbm: no visible binding for global variable ‘predictors’
+predictModel_gbm: no visible global function definition for
+  ‘confusionMatrix’
+predictModel_gbm: no visible binding for global variable ‘outcomeName’
+predictModel_glm: no visible global function definition for
+  ‘predict.train’
+predictModel_glm: no visible binding for global variable ‘testset’
+predictModel_glm: no visible binding for global variable ‘predictors’
+predictModel_glm: no visible global function definition for
+  ‘confusionMatrix’
+predictModel_glm: no visible binding for global variable ‘outcomeName’
+predictModel_nnet: no visible global function definition for
+  ‘predict.train’
+predictModel_nnet: no visible binding for global variable ‘testset’
+predictModel_nnet: no visible binding for global variable ‘predictors’
+predictModel_nnet: no visible global function definition for
+  ‘confusionMatrix’
+predictModel_nnet: no visible binding for global variable ‘outcomeName’
+predictModel_rf: no visible global function definition for
+  ‘predict.train’
+predictModel_rf: no visible binding for global variable ‘testset’
+predictModel_rf: no visible binding for global variable ‘predictors’
+predictModel_rf: no visible global function definition for
+  ‘confusionMatrix’
+predictModel_rf: no visible binding for global variable ‘outcomeName’
+train_model: no visible global function definition for ‘read.csv’
+train_model: no visible global function definition for
+  ‘createDataPartition’
+train_model: no visible global function definition for ‘train’
+Undefined global functions or variables:
+  confusionMatrix createDataPartition model_gbm outcomeName
+  predict.train predictors read.csv testset train
+Consider adding
+  importFrom("utils", "read.csv")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... WARNING
+Documented arguments not in \usage in documentation object 'predictModel_gbm':
+  ‘No’
+
+Documented arguments not in \usage in documentation object 'predictModel_glm':
+  ‘No’
+
+Documented arguments not in \usage in documentation object 'predictModel_nnet':
+  ‘No’
+
+Documented arguments not in \usage in documentation object 'predictModel_rf':
+  ‘No’
+
+Documented arguments not in \usage in documentation object 'readprojectpath':
+  ‘No’
+
+Documented arguments not in \usage in documentation object 'train_model':
+  ‘No’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... WARNING
+Files not of a type allowed in a ‘data’ directory:
+  ‘model_gbm.rds’ ‘model_glm.rds’ ‘model_nnet.rds’ ‘model_rf.rds’
+Please use e.g. ‘inst/extdata’ for non-R data files
+* checking data for non-ASCII characters ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking examples ... NONE
+* checking PDF version of manual ... WARNING
+LaTeX errors when creating PDF version.
+This typically indicates Rd problems.
+* checking PDF version of manual without hyperrefs or index ... ERROR
+Re-running with no redirection of stdout/stderr.
+* DONE
+Status: 1 ERROR, 5 WARNINGs, 3 NOTEs

@@ -1,0 +1,136 @@
+\nonstopmode{}
+\documentclass[a4paper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\usepackage[utf8,latin1]{inputenc}
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package `modelpkgs'}}
+\par\bigskip{\large \today}
+\end{center}
+\begin{description}
+\raggedright{}
+\item[Title]\AsIs{squared values}
+\item[Version]\AsIs{0.1}
+\item[Author]\AsIs{Muru}\email{murugesan.nagarajan@gmai.com}\AsIs{}
+\item[Maintainer]\AsIs{Naga}\email{murugesan.nagarajan@gmai.com}\AsIs{}
+\item[Description]\AsIs{Find the square}
+\item[Depends]\AsIs{R (>= 3.1.0)}
+\item[License]\AsIs{MIT}
+\item[RoxygenNote]\AsIs{6.0.1}
+\item[NeedsCompilation]\AsIs{no}
+\end{description}
+\Rdcontents{\R{} topics documented:}
+\inputencoding{utf8}
+\HeaderA{predictModel\_gbm}{This function reads the GBM model from the data directory and then predict the outcome based on the test data set.}{predictModel.Rul.gbm}
+%
+\begin{Description}\relax
+This function reads the GBM model from the data directory and then predict the outcome based on the test data set.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+predictModel_gbm()
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{No}] input Required
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{predictModel\_glm}{This function reads the GLM model from the data directory and then predict the outcome based on the test data set.}{predictModel.Rul.glm}
+%
+\begin{Description}\relax
+This function reads the GLM model from the data directory and then predict the outcome based on the test data set.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+predictModel_glm()
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{No}] input Required
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{predictModel\_nnet}{This function reads the Neural Network model from the data directory and then predict the outcome based on the test data set.}{predictModel.Rul.nnet}
+%
+\begin{Description}\relax
+This function reads the Neural Network model from the data directory and then predict the outcome based on the test data set.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+predictModel_nnet()
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{No}] input Required
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{predictModel\_rf}{This function reads the Random Forest model from the data directory and then predict the outcome based on the test data set.}{predictModel.Rul.rf}
+%
+\begin{Description}\relax
+This function reads the Random Forest model from the data directory and then predict the outcome based on the test data set.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+predictModel_rf()
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{No}] input Required
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{readprojectpath}{This function reads the project location from user and return the path to the caller.}{readprojectpath}
+%
+\begin{Description}\relax
+This function reads the project location from user and return the path to the caller.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+readprojectpath()
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{No}] input Required
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{train\_model}{The function train\_model reads the data from the csv file, apply multiple models and save the models output as .rds files.}{train.Rul.model}
+%
+\begin{Description}\relax
+The function train\_model reads the data from the csv file, apply multiple models and save the models output as .rds files.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+train_model()
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{No}] input Required
+\end{ldescription}
+\end{Arguments}
+\printindex{}
+\end{document}

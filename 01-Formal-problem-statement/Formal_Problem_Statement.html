@@ -9,7 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Murugesan Nagarjan" />
+<meta name="author" content="Murugesan Nagarajan" />
 
 <meta name="date" content="2018-04-17" />
 
@@ -120,7 +120,7 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Formal problem Statement</h1>
-<h4 class="author"><em>Murugesan Nagarjan</em></h4>
+<h4 class="author"><em>Murugesan Nagarajan</em></h4>
 <h4 class="date"><em>April 17, 2018</em></h4>
 
 </div>
@@ -128,58 +128,117 @@ $(document).ready(function () {
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>Bank ABC’s marketing department markets Bank products like Checking account, saving account, term deposit and Loan products to their customers. As part of this marketing calls, the marketing team contact various people and gather initial information about the customer and store them in a call history database. The database has the past call history and details about how many such a call turned into potential buyer.</p>
-<p>The team has around 2 years’ worth of call history and the outcome details whether a customer turned into buyer or not. The department director complained that the team is spending lot of effort on making this phone call campaign, but very little prospect become clients for them. He wanted improve the no of sales target.</p>
+<p>Bank ABC’s marketing department markets Bank products like Checking account, saving account, term deposit and Loan products to their customers and they conduct marketing campaign periodically. As part of this marketing campaign, the marketing team contacts various people and gather initial information about their personal and financial details and store them in a call history database. The database has the past call history and details about how many such a call turned into a potential buyer who subscribed to one of these products.</p>
+<p>The team has around 2 year’s worth of call history and the outcome details whether a customer turned into a buyer or not. The department director complained that the team is spending a lot of effort on making this phone call campaign, but very little prospect become a client for them. So, The manager wanted to improve his team productivity and reduce cost by predicting a potential subscriber using these past call history.</p>
 </div>
-<div id="purpose" class="section level2">
-<h2>Purpose</h2>
-<p>The purpose of this project is to reduce the marketing campaign spending cost and increase the sales target (sales per call)</p>
+<div id="purpose-of-the-project" class="section level2">
+<h2>Purpose of the project</h2>
+<p>The purpose of this project is to reduce the marketing campaign spending cost and increase the sales target (sales per call) by predicting a potential subscriber.</p>
 </div>
-<div id="stake-holders" class="section level2">
-<h2>Stake holders</h2>
-<p>Project sponsor: Marketing department director. End Users: Marketing team. Project Manager: IT project Manager Project Team: Data scientist, Data Engineer and Business Analyst Business user: Marketing Lead</p>
+<div id="stakeholders" class="section level2">
+<h2>Stakeholders</h2>
+<p>Important stakeholders for this project.</p>
+<table style="width:96%;">
+<colgroup>
+<col width="29%"></col>
+<col width="66%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Role</th>
+<th align="left">Task description and expectation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Project sponsor</td>
+<td align="left">Marketing department director is the sponsor for this project and responsible for funding this project and delivering the benefit to the Organization.</td>
+</tr>
+<tr class="even">
+<td align="left">Project Manager</td>
+<td align="left">IT Project Manager is responsible for implementing the project within timeline and given budget and addressing any roadblock during the execution of this project</td>
+</tr>
+<tr class="odd">
+<td align="left">Project Team</td>
+<td align="left">Project team consist of one Data scientist, two Data Engineer and one Business Analyst responsible for collecting data from Marketing team, Cleaning the data, identifying features, identifying the model,development, testing and implementing the model</td>
+</tr>
+<tr class="even">
+<td align="left">Business user</td>
+<td align="left">Marketing Lead is a business user for this project and responsible for validating the model in User acceptance environment and approving the model for the production deployment</td>
+</tr>
+<tr class="odd">
+<td align="left">End Users</td>
+<td align="left">Marketing team members will be using this model in their day to day life before contacting any prospects.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="success-criteria" class="section level2">
 <h2>Success criteria</h2>
-<p>Predicting whether a customer call become a client or not and reducing the no of calls to customer that will not turn into client.</p>
+<ul>
+<li>Model accuracy should be above 60% for better prediction rate.</li>
+<li>True positive and True negative should be more than 50%</li>
+<li>Reducing the marketing team spending cost on the marketing campaign.</li>
+</ul>
 </div>
 <div id="risk" class="section level2">
 <h2>Risk</h2>
-<p>Chances of losing potential client due to unavailability of data in call history.</p>
+<ul>
+<li><p>The model can predict a potential subscriber as non-subscriber due to unavailability of data in the call history database. This risk can be reduced by collecting more data from the marketing department.</p></li>
+<li><p>The project might face opposition from the Marketing team members since they might feel this project will take away their jobs.</p></li>
+<li><p>The project might not achieve the acceptable prediction behavior.</p></li>
+</ul>
 </div>
 <div id="project-usage" class="section level2">
 <h2>Project usage</h2>
-<p>Marketing team should provide the customer attributes (feature) to the developed Machine Learning model and predict whether this customer will subscribe to a bank product.</p>
+<p>The prediction model will be implemented in a production environment as part of Marketing campaign web application. The marketing team members will be entering the customer features in that application and then they will try to predict. The web application will use this model in the backend and provide a result to the marketing team member whether he/she can call the customer or not. Then marketing team member then decides whether to call this customer or not based on the criteria given to them.</p>
 </div>
-<div id="project-timeline" class="section level2">
-<h2>Project timeline:</h2>
+<div id="project-implementation-timeline" class="section level2">
+<h2>Project implementation timeline:</h2>
+<p>The model will be implemented in 4 to 5 months based on the below high-level timeline, The below timeline will be adjusted based on the unforeseen risk.</p>
 <table>
+<colgroup>
+<col width="17%"></col>
+<col width="44%"></col>
+<col width="37%"></col>
+</colgroup>
 <thead>
 <tr class="header">
 <th>Project Phase</th>
+<th>Description</th>
 <th>efforts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td>Data Analysis</td>
+<td>As part of this phase, development team interacts with the marketing team and understand the call history details</td>
+<td>2-3 weeks for Data Analysis</td>
+</tr>
+<tr class="even">
 <td>Data collection</td>
-<td>20 days</td>
-</tr>
-<tr class="even">
-<td>Organize and Store</td>
-<td>20 days</td>
+<td>As part of this phase, Development team collects raw data from marketing call history and identify key features, transform and prepare the data for Data Scientist</td>
+<td>4 weeks for data collection</td>
 </tr>
 <tr class="odd">
-<td>Utilize and build model</td>
-<td>40 days</td>
+<td>Model development</td>
+<td>As part of this phase, Data scientist use these features, train the model and come up with a suitable model for deployment</td>
+<td>8 weeks for development of model</td>
 </tr>
 <tr class="even">
-<td>Test and validate the Mode</td>
-<td>10 days</td>
+<td>UAT testing</td>
+<td>As part of this phase, the developed model will be deployed in UAT environment and marketing team lead will apply this model and evaluate for the production usage.</td>
+<td>2 weeks for UAT testing</td>
 </tr>
 <tr class="odd">
-<td>Decide</td>
-<td>10 days</td>
+<td>Production deployment</td>
+<td>The tested model will be deployed in the production environment and marketing team lead will validate the model and provide approval for the successful implementation</td>
+<td>1 weeks</td>
+</tr>
+<tr class="even">
+<td>Maintenance</td>
+<td>As part of this phase, The deployed model will be validated against ongoing customer call and performance will be captured for reevaluation</td>
+<td>6 months</td>
 </tr>
 </tbody>
 </table>
