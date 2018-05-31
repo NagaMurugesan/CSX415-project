@@ -80,6 +80,7 @@ predictModel_glm<- function()
   predict_glm<-predict.train(object=model_glm,testset[,predictors],type="raw")
   table(predict_glm)
   confusionMatrix(predict_glm,testset[,outcomeName])
+  return(predict_glm)
 }
 
 #'  This function reads the project location from user and return the path to the caller.
@@ -90,3 +91,17 @@ readprojectpath<- function()
   n <- readline(prompt="Enter the project location (CSX415-project): ")
   return(as.character(n))
 }
+
+#'  This function reads the Neural Network model from the data directory and then predict the outcome based on the test data set and then returns the response.
+#' @param No input Required
+#' @export
+predictModelcustomer<- function()
+{
+  
+  library("caret")
+  model_nnet<-readRDS(paste(getwd(),"/phone_mark/pkgs/modelpkgs/data/model_nnet.rds",sep=""))
+  
+  predict_nnet<-predict.train(object=model_nnet,testset[,predictors],type="raw")
+return(predict_nnet)
+}
+

@@ -137,12 +137,13 @@ $(document).ready(function () {
 </div>
 <div id="project-details" class="section level1">
 <h1>Project details</h1>
-<p>Initial analysis reports are availale at /CSX415-project/02-initial-analysis as .rmd file and HTML report.</p>
+<p>Initial analysis reports are available at /CSX415-project/02-initial-analysis as .rmd file and HTML report.</p>
 <p>simple analysis with Linear model and rpart model analysis reports are located at /CSX415-project/03-simple-analysis</p>
 </div>
 <div id="package-location" class="section level1">
 <h1>Package Location</h1>
 <p>Model package is located at /CSX415-project/phone_mark/pkgs/modelpkgs/ and the package project file is modelpkgs.Rproj</p>
+<p>Package name is modelpkgs</p>
 </div>
 <div id="dependency" class="section level1">
 <h1>Dependency</h1>
@@ -165,7 +166,21 @@ $(document).ready(function () {
 <p>execute the function predictModel_rf() to test the Random Forest model with the test data.</p>
 <p>execute the function predictModel_nnet() to test the Neural Network model with the test data.</p>
 <p>execute the function predictModel_glm() to test the Neural Network model with the test data.</p>
-<p>Final model score is located in the /CSX415-project/phone_mark/reports/ folder.</p>
+<p>Final model score and performance evaluation is located in the /CSX415-project/phone_mark/reports/ folder.</p>
+</div>
+<div id="running-the-project" class="section level1">
+<h1>Running the project</h1>
+<p>set the working directory as the absolute path of the project location CSX415-project and then call the below function.</p>
+<p>Training the GBM,Random Forest , Neural Network and GLM model train_model()</p>
+<p>Validating the test dataset using the GBM model predictModel_gbm()</p>
+<p>Validating the test data using Random Forest model predictModel_rf()</p>
+<p>Validating the test data using Neural Network model predictModel_nnet()</p>
+<p>Validating the test data using GLM model predictModel_glm()</p>
+<p>Predict the target based on the testset and returns the response predictModelcustomer()</p>
+</div>
+<div id="packrat-archival" class="section level1">
+<h1>Packrat archival</h1>
+<p>Packrat bundled file is located at /CSX415-project/phone_mark/pkgs/modelpkgs/packrat/bundles/ and use the latest bundle from this location.</p>
 </div>
 
 

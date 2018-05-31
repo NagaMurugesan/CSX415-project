@@ -65,7 +65,25 @@ Final model score and performance evaluation is located in the /CSX415-project/p
 
 # Running the project
 
-set the working directory as the absolute path of the project location CSX415-project and then run main.R file located in folder /CSX415-project/phone_mark/pkgs/modelpkgs/R/.
+set the working directory as the absolute path of the project location CSX415-project and then call the below function. 
+
+Training the GBM,Random Forest , Neural Network and GLM model
+train_model()
+
+Validating the test dataset using the GBM model
+predictModel_gbm()
+
+Validating the test data using Random Forest model 
+predictModel_rf()
+
+Validating the test data using Neural Network model 
+predictModel_nnet()
+
+Validating the test data using GLM model 
+predictModel_glm()
+
+Predict the target based on the testset and returns the response
+predictModelcustomer()
 
 # Packrat archival
 
